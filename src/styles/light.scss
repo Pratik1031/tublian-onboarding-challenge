@@ -1,0 +1,678 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: auto;
+    background-color: black;
+    color: #B7B7B7;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.highlight{
+   color: #FEFEFE;
+   font-weight: 700;
+}
+.select-cards{
+  width:250px;
+  position: relative;
+  height:388px;
+  border-radius: 20px;
+  margin-right: 2rem;
+  padding: 0.6rem;
+  border: 1px solid #292929;
+  background: linear-gradient(0deg, #1E1E1E, #1E1E1E),
+}
+.select-cards-checked{
+  width:250px;
+  position: relative;
+  height:388px;
+  border-radius: 20px;
+  margin-right: 2rem;
+  padding: 0.6rem;
+
+  box-shadow: 0 0 0 0.4px #FBDA61, 0 0 0 .83px rgba(255, 90, 205, 0.84);
+  background: linear-gradient(0deg, #1E1E1E, #1E1E1E),
+
+}
+.select-cards-payment{
+  @extend .select-cards;
+
+}
+.select-cards-payment:hover{
+  box-shadow: 0 0 0 0.48px #FBDA61, 0 0 0 .81px rgba(255, 90, 205, 0.84);
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); 
+}
+
+.overlay-modal{
+position: relative;
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
+padding: 15px;
+border: 1px solid #333;
+background: linear-gradient(0deg, #1E1E1E, #1E1E1E);
+width: 580px;
+height: 90vh;
+bottom: 20px;
+border-radius: 20px;
+border: 1px;
+}
+
+.overlay-modal::-webkit-scrollbar {
+  width: 6px; 
+  padding-right: 1rem;
+
+}
+.overlay-modal:hover {
+  overflow-y: auto;
+  padding-right: 1rem;
+
+}
+
+
+.overlay-modal::-webkit-scrollbar-thumb {
+  background-color:  #1E1E1E;
+  border-radius: 3px; 
+  padding-right: 1rem;
+}
+
+.overlay-modal::-webkit-scrollbar-track {
+  background-color: #333; 
+  padding-right: 1rem;
+
+}
+
+.overlay-modal-sucess{
+@extend .overlay-modal;
+position:relative;
+width: 580px;
+height: 60vh;
+border-radius: 20px;
+border: 1px;
+
+}
+.overlay-modal-sucess-logo{
+  @extend .overlay-modal-sucess;
+  position: relative;
+  width: 550px;
+  height: 37vh;
+}
+
+
+.modal-close{
+width: 32px;
+height:32px;
+cursor: pointer;
+}
+.select-period{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+background-color: #333;
+padding: 3px;
+  width: 230px;
+height: 48px;
+ border-radius: 10px;
+border: 1px solid #333;
+}
+
+.monthly-plan{
+  width: 128px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  color: transparent;
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+  padding: 1px;
+  border-radius: 10px;
+  color: #FEFEFE;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+.anually-plan{
+  @extend .monthly-plan;
+  background-image:none
+
+}
+.discount-plan{
+  background: #445742;
+  width: 57px;
+  height:24px;
+  padding: 4px 6px 4px 6px;
+  border-radius: 33px
+
+}
+.plan-button-custom{
+  @extend .plan-button;
+  color: #FEFEFE;
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+
+}
+.plan-mode1{
+background-image: linear-gradient(180deg, #855FEF 0%, #5435AA 100%);
+color: #FEFEFE;
+border: 1px solid #B29BF3;
+width:auto;
+height:29px;
+left: 20px;
+font-size: 14px;
+font-weight: 500;
+padding: 3px, 20px, 3px, 20px;
+border-radius: 5px;
+}
+
+.plan-mode2{
+  @extend .plan-mode1;
+  background-image: linear-gradient(180deg, #0881FF 0%, #0B4F95 100%);
+
+
+  border: 1px solid #79BBFF;
+
+  }
+
+
+  .plan-mode3{
+    @extend .plan-mode1;
+    background-image: linear-gradient(180deg, #068092 0%, #043B43 100%);
+    border: 1px solid #22BFD6;
+    }
+
+.disc-text{
+color: #76F368;
+width: 45px;
+height: 16px;
+font-size: 12px;
+font-weight: 700;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+}
+.plan-head{
+color:#FEFEFE;
+font-weight: 700;
+font-size: 30px;
+}
+.plan-month{
+  color:#B7B7B7;
+  font-weight: 500;
+  font-size: 15px;
+}
+.images-login{
+    width: 90px;
+    height: 20px;
+   margin: 15px 10px 0px 0px;
+
+}
+.credit-card{
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.credit-card-modes{
+  width: 124px;
+  height: 24px;
+  left: 416px;
+  gap:8px
+}
+.google-card{
+  width: 57px;
+  height: 24px;
+}
+.images-login-sucess{
+  @extend .images-login;
+  position: relative;
+  z-index: 1;
+}
+.images-modal{
+  @extend .images-login;
+  margin: 8px 0px 0px 0px;
+
+
+}
+.payment-brand{
+  width:70px;
+  height:32px
+}
+
+.plan-details {
+  width: 540px;
+height: 175px;
+margin: 1rem auto 3rem auto;
+border-radius: 10px;
+background-color: linear-gradient(0deg, #292929, #292929);
+border: 1px solid #414141;
+}
+
+.plan-details-mainhead{
+  width: 540px;
+  display: flex;
+  justify-content: space-between;
+height: 32px;
+top: 14px;;
+
+
+}
+.payment-plantext{
+width: 128px;
+height: 32px;
+flex-wrap: nowrap;
+white-space: nowrap;
+margin-left: 10px;
+font-size: 20px;
+font-weight: 700;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: left;
+color: #fefefe;
+}
+.payment-plantext-details{
+  @extend .payment-plantext;
+  width: 142px;
+height: 30px;
+font-size: 18px;
+margin-bottom: 1rem;
+line-height: 30px;
+letter-spacing: 0em;
+}
+.payment-change{
+@extend .payment-plantext;
+flex-wrap: nowrap;
+width: 228px;
+margin-right: 10px;
+white-space: nowrap;
+text-align: right;
+color:#ffffff;
+}
+.paymentboxes{
+  width: 540px;
+  height: 48px;
+  padding: 8px, 499px, 16px, 0px;
+  margin-left: 0;
+  border-bottom: 1px solid #888888;
+  border: 0px, 0px, 1px, 0px;
+}
+
+.paymentboxescard{
+  @extend .paymentboxes;
+  border:0px;
+  height: 25px;
+}
+.payment-monthcvv{
+  @extend .paymentboxes;
+  width: 260px;
+}
+.carddiv{
+ height: 40px;
+ margin-bottom: 0.5rem;
+  border-bottom: 1px solid #888888;
+}
+.paymentboxes::placeholder {
+  width: 41px;
+  height: 24px;
+  top: 8px;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #696969;
+
+
+}
+
+.payment-lists{
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+.list-select {
+  display: flex;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #292929;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 0.5rem;
+}
+.list-select:hover{
+  @extend .list-select;
+  box-shadow: 0 0 0 0.6px #FBDA61, 0 0 0 .9px rgba(255, 90, 205, 0.84);
+
+}
+.list-select-checked{
+  @extend .list-select;
+  box-shadow: 0 0 0 0.6px #FBDA61, 0 0 0 .9px rgba(255, 90, 205, 0.84);
+}
+.line-pay{
+   border-top: 1px solid #414141;
+  width:540px;
+  height: 0;
+margin:20px 0;
+}
+
+.check-circle {
+  position: relative;
+  width: 21px; 
+  height: 21px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color:#76F368;;
+  border: 2px solid #76F368; 
+}
+
+.check-circle::before {
+  content: '\2713'; 
+  font-size: 16px;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.check-circle-opt{
+  @extend .check-circle;
+  content:'';
+
+}
+.check-circle-opt:checked + label::before {
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+
+}
+
+.banner-left{
+  width: 100%;
+  height: 100vh;
+}
+
+.banner-create-account{
+  background-image: linear-gradient(180deg, #FDD649 0%, #BCC83D 100%);
+  width: 100%;
+  height: 100vh;
+
+}
+  .user-profile{
+  width: 553.91px;
+  height: 347px;
+margin-top: 50%;
+margin-bottom: 50%;
+display: block;
+  }
+  .d1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 177px;
+    height: 70px;
+    }
+    .d2{
+      @extend .d1;
+    margin-right: auto;
+     margin-left: 0;
+    justify-content:flex-start;
+
+    }
+
+.signup-check{
+        width: 14px;
+        padding:4px;
+        height: 14px;
+}
+.google-logo{
+    width: 24px;
+    padding:10px;
+    height: 24px;
+}
+.footer{
+    bottom:0;
+    margin-left: 0px;
+    position: fixed;
+    padding: 15px;
+}
+.acc-desc{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+.team-prex{
+  width:198px;
+  height: 116px;
+  top:46px;
+  left:26px;
+}
+.footer-bottom {
+  position:static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background-color: #000;
+  padding: 15px;
+}
+
+.footer-bottom-hide{
+  @extend .footer-bottom;
+  z-index: -1;
+}
+
+.user-name {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(0deg, #4ba3ff, #4ba3ff);
+  }
+
+.login-text-criteria{
+    margin-right:6px;
+    flex-wrap:wrap;
+    line-height: 15px;
+    white-space:nowrap;
+    max-width:150px;
+    color: #888888
+}
+.line {
+    width: 100%;
+    height: 0.2px;
+    margin:2rem 0.8rem 2rem 0rem;
+    background-color: #414141;
+    border: 0.4px solid #414141
+  }
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width:390px;
+    color: aliceblue;
+    margin: 0 0 1.5rem 1rem;
+    border-bottom: 2px solid rgb(39, 36, 36);
+    background: none;
+    display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+
+  input::after {
+    content: '';
+    display: block;
+    width:390px;
+    height: 1px;
+    background-color: #000;
+    transition: height 0.3s ease;
+  }
+
+
+  input:focus::after {
+    height: 2px;
+  }
+  .login-button{
+  background-color: #FDD649;
+  color: #000000;
+  padding: 8px 16px 8px 16px;
+  font-size: 16px;
+  height:40px;
+  width:405px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  }
+  .payment-process-sucess{
+    @extend .login-button;
+    width: 540px;
+    margin-bottom: 2rem;
+  }
+  .textColorYellow{
+    color:#FDD649;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+  }
+  .textColorBlue{
+@extend .textColorYellow;
+color: #91C3FD;
+  }
+  .sucess-button{
+  @extend .login-button;
+  width: 560px;
+  left: 20px;
+  position: absolute;
+  bottom: 0;
+  padding: 8px, 16px, 15px, 16px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  gap: 8px;
+
+  }
+  .payment-next{
+    @extend .login-button;
+    margin-top: 5rem;
+  }
+  .plan-button{
+  @extend .login-button;
+  width: 261px;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  padding: 8px, 16px, 8px, 16px;
+  border-radius: 30px;
+  }
+
+  .google-sign {
+    background-color: #000000;
+    color: #fefefe;
+    padding: 8px 16px;
+    font-size: 16px;
+    height: 40px;
+    width: 405px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 0 0.34px #FBDA61, 0 0 0 .83px rgba(255, 90, 205, 0.84);
+
+
+  }
+  .sucess-paid{
+    width: 540px;
+height: 45px;
+left: 20px;
+font-size: 30px;
+font-weight: 700;
+margin: 10px;
+// line-height: 45px;
+letter-spacing: 0em;
+text-align: center;
+
+  }
+.sucess-message{
+  width: 540px;
+height: 24px;
+left: 20px;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px; 
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+input[type="checkbox"] + label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333; 
+  background: linear-gradient(0deg, #1E1E1E, #1E1E1E);
+  border-radius: 50%;
+}
+
+
+input[type="checkbox"]:checked + label::before {
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: '\2713'; 
+  position: absolute;
+  top: 12px;
+  left:12px;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #333
+}
+
+.currstyles{
+  width: 28px;
+height: 20px;
+font-size: 14px;
+font-weight: 700;
+line-height: 20px;
+margin-right: 5px;
+letter-spacing: 0em;
+text-align: left;
+color: #B7B7B7;
+
+}
